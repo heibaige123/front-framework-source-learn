@@ -3769,6 +3769,11 @@ export interface builders {
   forInStatement: ForInStatementBuilder;
   debuggerStatement: DebuggerStatementBuilder;
   functionDeclaration: FunctionDeclarationBuilder;
+  /**
+   * FunctionExpression节点代表一个函数表达式。函数表达式可以赋值给变量、
+   * 作为参数传递给其他函数，或者作为对象的属性。与FunctionDeclaration不同，
+   * FunctionExpression不是通过function关键字声明的，而是通过赋值操作符赋值给一个变量或属性。
+   */
   functionExpression: FunctionExpressionBuilder;
   variableDeclarator: VariableDeclaratorBuilder;
   thisExpression: ThisExpressionBuilder;
@@ -3779,17 +3784,35 @@ export interface builders {
   sequenceExpression: SequenceExpressionBuilder;
   unaryExpression: UnaryExpressionBuilder;
   binaryExpression: BinaryExpressionBuilder;
+  /**
+   * 赋值操作, 具有以下属性
+   * - operator：赋值操作符，例如=, +=, -=, *=, /=等。
+   * - left：赋值的目标，通常是Identifier（变量名）或MemberExpression（对象属性）。
+   * - right：赋值的源，可以是任何有效的JavaScript表达式，例如字面量、变量、函数调用等。
+   */
   assignmentExpression: AssignmentExpressionBuilder;
   memberExpression: MemberExpressionBuilder;
   updateExpression: UpdateExpressionBuilder;
   logicalExpression: LogicalExpressionBuilder;
   conditionalExpression: ConditionalExpressionBuilder;
   newExpression: NewExpressionBuilder;
+  /**
+   * 调用表达式, 表示函数或方法的调用, 具有以下属性
+   * - callee：被调用的函数或方法，这可以是一个Identifier节点（表示函数名）、MemberExpression节点（表示对象的方法调用，如object.method()）或其他类型的表达式。
+   * - arguments：一个数组，包含了传递给函数调用的参数列表，每个参数都是一个单独的节点。
+   */
   callExpression: CallExpressionBuilder;
   restElement: RestElementBuilder;
   typeAnnotation: TypeAnnotationBuilder;
   tsTypeAnnotation: TSTypeAnnotationBuilder;
+  /**
+   * 与ES2020引入的解构赋值中的扩展运算符模式（spread operator pattern）相对应。
+   * 这种模式允许你将一个数组或对象的剩余元素赋值给一个变量。
+   */
   spreadElementPattern: SpreadElementPatternBuilder;
+  /**
+   * ArrowFunctionExpression节点代表一个箭头函数表达式
+   */
   arrowFunctionExpression: ArrowFunctionExpressionBuilder;
   forOfStatement: ForOfStatementBuilder;
   yieldExpression: YieldExpressionBuilder;
@@ -3802,11 +3825,21 @@ export interface builders {
   arrayPattern: ArrayPatternBuilder;
   spreadElement: SpreadElementBuilder;
   assignmentPattern: AssignmentPatternBuilder;
+  /**
+   * 类中的一个方法定义。这包括实例方法、静态方法、构造函数（虽然构造函数通常使用ClassMethod节点，
+   * 但它们也可以被视为方法定义的一种）、getter和setter等。
+   */
   methodDefinition: MethodDefinitionBuilder;
   classPropertyDefinition: ClassPropertyDefinitionBuilder;
   classProperty: ClassPropertyBuilder;
   staticBlock: StaticBlockBuilder;
+  /**
+   * ClassBody节点代表类的主体部分，包含了类的方法、属性、构造器以及其他类元素。ClassBody是一个类定义的必需部分，它由大括号{}包围。
+   */
   classBody: ClassBodyBuilder;
+  /**
+   * ClassDeclaration节点代表了一个类声明。类声明定义了一个新的类类型，可以包含构造函数、类方法、类字段等。
+   */
   classDeclaration: ClassDeclarationBuilder;
   classExpression: ClassExpressionBuilder;
   super: SuperBuilder;
@@ -3820,6 +3853,10 @@ export interface builders {
   exportAllDeclaration: ExportAllDeclarationBuilder;
   taggedTemplateExpression: TaggedTemplateExpressionBuilder;
   templateLiteral: TemplateLiteralBuilder;
+  /**
+   * 模板字符串（Template Literals）是一种允许嵌入表达式的字符串字面量。
+   * 模板字符串使用反引号（`）包围，并允许通过${}占位符插入变量或表达式。
+   */
   templateElement: TemplateElementBuilder;
   metaProperty: MetaPropertyBuilder;
   awaitExpression: AwaitExpressionBuilder;
@@ -3836,6 +3873,10 @@ export interface builders {
   recordExpression: RecordExpressionBuilder;
   objectMethod: ObjectMethodBuilder;
   tupleExpression: TupleExpressionBuilder;
+  /**
+   * ModuleExpression不是一个标准AST节点类型。然而，
+   * 如果你是在谈论动态导入（Dynamic Imports）的语法，它使用了类似于模块表达式的形式
+   */
   moduleExpression: ModuleExpressionBuilder;
   jsxAttribute: JSXAttributeBuilder;
   jsxIdentifier: JSXIdentifierBuilder;
@@ -3890,6 +3931,10 @@ export interface builders {
   variance: VarianceBuilder;
   qualifiedTypeIdentifier: QualifiedTypeIdentifierBuilder;
   genericTypeAnnotation: GenericTypeAnnotationBuilder;
+  /**
+   * MemberTypeAnnotation是TypeScript或Flow等静态类型检查工具中使用的一种类型注解，
+   * 用于定义对象成员的类型。这种类型注解通常用于类或接口中，以指定对象属性或方法的类型。
+   */
   memberTypeAnnotation: MemberTypeAnnotationBuilder;
   indexedAccessType: IndexedAccessTypeBuilder;
   optionalIndexedAccessType: OptionalIndexedAccessTypeBuilder;
@@ -3937,18 +3982,62 @@ export interface builders {
   exportDefaultSpecifier: ExportDefaultSpecifierBuilder;
   commentBlock: CommentBlockBuilder;
   commentLine: CommentLineBuilder;
+  /**
+   * 一个"directive"是出现在脚本或模块最前面的字符串字面量，被解释为执行环境中的指令。
+   * 最常见的directive是"use strict";，它指示JavaScript引擎以严格模式来执行代码。
+   * Directive通常出现在JavaScript文件的最开始部分，或者在模块的最开始部分。
+   */
   directive: DirectiveBuilder;
+  /**
+   * DirectiveLiteral通常指的是出现在JavaScript代码字符串开头的特殊注释，
+   * 它用来指示JavaScript引擎某些特定的运行时选项或指令。
+   * 最常见的例子是使用在严格模式下的严格指令（"use strict";）。
+   */
   directiveLiteral: DirectiveLiteralBuilder;
   interpreterDirective: InterpreterDirectiveBuilder;
   stringLiteral: StringLiteralBuilder;
   numericLiteral: NumericLiteralBuilder;
   bigIntLiteral: BigIntLiteralBuilder;
+  /**
+   * 在JavaScript的AST（抽象语法树）中，并没有一个特定的DecimalLiteral节点类型。
+   * 数值字面量通常被表示为Literal节点，并且数值的类型（整数或浮点数）
+   * 由value属性的JavaScript数据类型决定。如果数值字面量表示的是一个十进制数（即包含小数点的数），
+   * 它同样会被识别为Literal节点。
+   */
   decimalLiteral: DecimalLiteralBuilder;
   nullLiteral: NullLiteralBuilder;
+  /**
+   * 布尔字面量，即直接表示布尔值true或false的字面量。
+   */
   booleanLiteral: BooleanLiteralBuilder;
+  /**
+   * 正则表达式字面量。正则表达式字面量是被斜杠/包围的模式字符串，
+   * 可以包含可选的"g"（全局搜索）、"i"（不区分大小写）、"m"（多行搜索）等标志。
+   */
   regExpLiteral: RegExpLiteralBuilder;
+  /**
+   * 类中的一个方法定义, 在JavaScript的AST（抽象语法树）中，
+   * ClassMethod节点代表类中的一个方法定义。ClassMethod可以是实例方法（非静态方法），也可以是静态方法。
+   * - key：表示方法名称的Identifier或Literal节点。
+   * - value：表示方法体的FunctionExpression节点。
+   * - kind：表示方法的种类，常见的值有"method"（常规方法）、"constructor"（构造函数）、"get"（getter方法）、"set"（setter方法）。
+   * - static：布尔值，表示方法是否为静态方法。
+   * - computed：布尔值，表示方法名是否是计算得出的。
+   */
   classMethod: ClassMethodBuilder;
+  /**
+   * 私有方法, 私有方法可以是常规方法、静态方法、getter或setter。
+   */
   classPrivateMethod: ClassPrivateMethodBuilder;
+  /**
+   * 定义类的访问器（getter 和 setter）。访问器允许你控制对类属性的访问和赋值。
+   * 节点具有以下属性：
+   * - key：属性名称，是一个 Identifier 节点。
+   * - value：定义 getter 或 setter 的函数，是一个 FunctionExpression 节点。
+   * - kind：表示这是一个 getter ("get") 还是 setter ("set")。
+   * - static：布尔值，表示这个访问器是否是静态的。
+   * - computed：布尔值，表示属性名是否是计算得出的。
+   */
   classAccessorProperty: ClassAccessorPropertyBuilder;
   restProperty: RestPropertyBuilder;
   forAwaitStatement: ForAwaitStatementBuilder;
