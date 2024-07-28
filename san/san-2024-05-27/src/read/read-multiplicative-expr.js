@@ -7,7 +7,7 @@
  * @file 读取乘法表达式
  */
 
-var ExprType = require('./expr-type');
+var ExprType = require('../parser/expr-type');
 var readUnaryExpr = require('./read-unary-expr');
 
 /**

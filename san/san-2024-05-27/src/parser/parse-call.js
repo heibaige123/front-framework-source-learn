@@ -7,10 +7,9 @@
  * @file 解析调用
  */
 
-
-var Walker = require('./walker');
-var ExprType = require('./expr-type');
-var readCall = require('./read-call');
+var Walker = require("./walker");
+var ExprType = require("./expr-type");
+var readCall = require("../read/read-call");
 
 /**
  * 解析调用
@@ -26,10 +25,10 @@ function parseCall(source, defaultArgs) {
         expr = {
             type: ExprType.CALL,
             name: expr,
-            args: defaultArgs || []
+            args: defaultArgs || [],
         };
     }
-    
+
     return expr;
 }
 

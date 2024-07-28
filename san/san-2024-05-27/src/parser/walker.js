@@ -17,6 +17,9 @@
 function Walker(source) {
     this.source = source;
     this.len = this.source.length;
+    /**
+     * 当前处理到的字符位置
+     */
     this.index = 0;
 }
 
@@ -31,6 +34,8 @@ Walker.prototype.nextCode = function () {
 };
 
 /**
+ * 跳过源代码中的空白字符或其他非关键字符，直到遇到下一个有意义的字符
+ * 
  * 向前读取字符，直到遇到指定字符再停止
  * 未指定字符时，当遇到第一个非空格、制表符的字符停止
  *

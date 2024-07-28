@@ -7,7 +7,7 @@
  * @file 读取访问表达式
  */
 
-var ExprType = require('./expr-type');
+var ExprType = require('../parser/expr-type');
 var readIdent = require('./read-ident');
 var readTertiaryExpr = require('./read-tertiary-expr');
 

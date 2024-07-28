@@ -7,7 +7,7 @@
  * @file 读取逻辑与表达式
  */
 
-var ExprType = require('./expr-type');
+var ExprType = require('../parser/expr-type');
 var readEqualityExpr = require('./read-equality-expr');
 
 /**

@@ -7,7 +7,7 @@
  * @file 读取相等比对表达式
  */
 
-var ExprType = require('./expr-type');
+var ExprType = require('../parser/expr-type');
 var readRelationalExpr = require('./read-relational-expr');
 
 /**

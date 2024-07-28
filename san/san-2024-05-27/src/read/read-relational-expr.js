@@ -7,7 +7,7 @@
  * @file 读取关系判断表达式
  */
 
-var ExprType = require('./expr-type');
+var ExprType = require('../parser/expr-type');
 var readAdditiveExpr = require('./read-additive-expr');
 
 /**

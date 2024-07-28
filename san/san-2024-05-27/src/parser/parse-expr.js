@@ -8,7 +8,7 @@
  */
 
 var Walker = require('./walker');
-var readTertiaryExpr = require('./read-tertiary-expr');
+var readTertiaryExpr = require('../read/read-tertiary-expr');
 
 /**
  * 解析表达式

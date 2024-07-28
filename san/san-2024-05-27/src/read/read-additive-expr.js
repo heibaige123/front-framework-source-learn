@@ -7,7 +7,7 @@
  * @file 读取加法表达式
  */
 
-var ExprType = require('./expr-type');
+var ExprType = require('../parser/expr-type');
 var readMultiplicativeExpr = require('./read-multiplicative-expr');
 
 

@@ -8,9 +8,9 @@
  */
 
 var Walker = require('./walker');
-var readTertiaryExpr = require('./read-tertiary-expr');
+var readTertiaryExpr = require('../read/read-tertiary-expr');
 var ExprType = require('./expr-type');
-var readCall = require('./read-call');
+var readCall = require('../read/read-call');
 var decodeHTMLEntity = require('../util/decode-html-entity');
 
 
@@ -40,7 +40,7 @@ function parseText(source, delimiters) {
             };
         }
         else {
-            current.value = current.value + value; 
+            current.value = current.value + value;
         }
     }
 
@@ -86,7 +86,7 @@ function parseText(source, delimiters) {
                         interp.filters.push(callExpr);
                 }
             }
-    
+
             original = original || interp.original;
             segs[++segIndex] = interp;
         }
