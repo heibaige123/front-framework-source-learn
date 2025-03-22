@@ -1,0 +1,1 @@
+rm -rf website/docs/library-api
