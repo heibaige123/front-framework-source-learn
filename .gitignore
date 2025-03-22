@@ -6,3 +6,5 @@ website/docs/library-api
 
 .pnp.cjs
 .pnp.loader.mjs
+
+.DS_Store
