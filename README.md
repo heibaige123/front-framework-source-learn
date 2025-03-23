@@ -22,6 +22,10 @@ git merge --allow-unrelated-histories ms/main
 ```
 
 - [docusaurus](https://docusaurus.io/zh-CN/docs/installation)
-- [Starlight](https://starlight.astro.build/zh-cn/getting-started/)
-- [Astro](https://github1s.com/withastro/docs/blob/main/src/content.ts)
-- 
+- Starlight
+  - https://starlight.astro.build/zh-cn/getting-started/
+  - https://github1s.com/withastro/starlight
+- Astro
+  - https://github.com/withastro/astro
+  - https://github1s.com/withastro/docs/blob/main/src/content.ts
+  
