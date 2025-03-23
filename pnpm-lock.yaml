@@ -164,9 +164,24 @@ importers:
       sharp:
         specifier: ^0.32.5
         version: 0.32.6
+      starlight-typedoc:
+        specifier: ^0.17.0
+        version: 0.17.0(@astrojs/starlight@0.32.4(astro@5.5.4(@types/node@22.13.11)(jiti@1.21.7)(rollup@4.36.0)(sass@1.86.0)(terser@5.39.0)(typescript@5.6.3)(yaml@2.7.0)))(typedoc-plugin-markdown@4.5.2(typedoc@0.28.1(typescript@5.6.3)))(typedoc@0.28.1(typescript@5.6.3))
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.17
+      typedoc:
+        specifier: ^0.28.1
+        version: 0.28.1(typescript@5.6.3)
+      typedoc-plugin-frontmatter:
+        specifier: ^1.0.0
+        version: 1.3.0(typedoc-plugin-markdown@4.5.2(typedoc@0.28.1(typescript@5.6.3)))
+      typedoc-plugin-markdown:
+        specifier: ^4.1.1
+        version: 4.5.2(typedoc@0.28.1(typescript@5.6.3))
+      typedoc-plugin-mdn-links:
+        specifier: ^3.0.3
+        version: 3.3.8(typedoc@0.28.1(typescript@5.6.3))
 
 packages:
 
@@ -5836,6 +5851,14 @@ packages:
     resolution: {integrity: sha512-XlkWvfIm6RmsWtNJx+uqtKLS8eqFbxUg0ZzLXqY0caEy9l7hruX8IpiDnjsLavoBgqCCR71TqWO8MaXYheJ3RQ==}
     engines: {node: '>=10'}
 
+  starlight-typedoc@0.17.0:
+    resolution: {integrity: sha512-7ARUGo45ZWfAF5UI5HLLmLFGlMYdWW27Xfqcm4PBgcjZaGnEeEayqbusqc+5qAX46R5gzJ9ei8fxfMKZWMtgqg==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.25.0'
+      typedoc: '>=0.26.5'
+      typedoc-plugin-markdown: '>=4.1.1'
+
   statuses@1.5.0:
     resolution: {integrity: sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==}
     engines: {node: '>= 0.6'}
@@ -6259,11 +6282,21 @@ packages:
     resolution: {integrity: sha512-q7QNVDGTdl702bVFiI5eY4l/HkgCM6at9KhcFbgUAzezHFbOVy4+0O/lCjsABEQwbZPravVfBIiBVGo89yzHFg==}
     engines: {node: '>= 0.4'}
 
+  typedoc-plugin-frontmatter@1.3.0:
+    resolution: {integrity: sha512-xYQFMAecMlsRUjmf9oM/Sq2FVz4zlgcbIeVFNLdO118CHTN06gIKJNSlyExh9+Xl8sK0YhIvoQwViUURxritWA==}
+    peerDependencies:
+      typedoc-plugin-markdown: '>=4.5.0'
+
   typedoc-plugin-markdown@4.5.2:
     resolution: {integrity: sha512-n0wfkCQU4nts13v8RSWMzIGNMbDo4P+oumHW6JudriknJLJSzx7p19OKJP8rKXvBkA+SFFuT7mW8lkMZZROz4g==}
     engines: {node: '>= 18'}
     peerDependencies:
       typedoc: 0.28.x
+
+  typedoc-plugin-mdn-links@3.3.8:
+    resolution: {integrity: sha512-Aewg+SW7hBdffRpT6WnpRwWthoaF9irlzXDKRyvcDVekPZSFujOlh690SV6eCgqrtP7GBJmN0TVeJUq6+6rb1w==}
+    peerDependencies:
+      typedoc: '>= 0.23.14 || 0.24.x || 0.25.x || 0.26.x'
 
   typedoc@0.28.1:
     resolution: {integrity: sha512-Mn2VPNMaxoe/hlBiLriG4U55oyAa3Xo+8HbtEwV7F5WEOPXqtxzGuMZhJYHaqFJpajeQ6ZDUC2c990NAtTbdgw==}
@@ -14293,6 +14326,13 @@ snapshots:
     dependencies:
       escape-string-regexp: 2.0.0
 
+  starlight-typedoc@0.17.0(@astrojs/starlight@0.32.4(astro@5.5.4(@types/node@22.13.11)(jiti@1.21.7)(rollup@4.36.0)(sass@1.86.0)(terser@5.39.0)(typescript@5.6.3)(yaml@2.7.0)))(typedoc-plugin-markdown@4.5.2(typedoc@0.28.1(typescript@5.6.3)))(typedoc@0.28.1(typescript@5.6.3)):
+    dependencies:
+      '@astrojs/starlight': 0.32.4(astro@5.5.4(@types/node@22.13.11)(jiti@1.21.7)(rollup@4.36.0)(sass@1.86.0)(terser@5.39.0)(typescript@5.6.3)(yaml@2.7.0))
+      github-slugger: 2.0.0
+      typedoc: 0.28.1(typescript@5.6.3)
+      typedoc-plugin-markdown: 4.5.2(typedoc@0.28.1(typescript@5.6.3))
+
   statuses@1.5.0: {}
 
   statuses@2.0.1: {}
@@ -14809,7 +14849,16 @@ snapshots:
       typed-array-buffer: 1.0.3
       typed-array-byte-offset: 1.0.4
 
+  typedoc-plugin-frontmatter@1.3.0(typedoc-plugin-markdown@4.5.2(typedoc@0.28.1(typescript@5.6.3))):
+    dependencies:
+      typedoc-plugin-markdown: 4.5.2(typedoc@0.28.1(typescript@5.6.3))
+      yaml: 2.7.0
+
   typedoc-plugin-markdown@4.5.2(typedoc@0.28.1(typescript@5.6.3)):
+    dependencies:
+      typedoc: 0.28.1(typescript@5.6.3)
+
+  typedoc-plugin-mdn-links@3.3.8(typedoc@0.28.1(typescript@5.6.3)):
     dependencies:
       typedoc: 0.28.1(typescript@5.6.3)
 

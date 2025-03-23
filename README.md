@@ -25,6 +25,8 @@ git merge --allow-unrelated-histories ms/main
 - Starlight
   - https://starlight.astro.build/zh-cn/getting-started/
   - https://github1s.com/withastro/starlight
+- Starlight TypeDoc
+  - https://starlight-typedoc.vercel.app/
 - Astro
   - https://github.com/withastro/astro
   - https://github1s.com/withastro/docs/blob/main/src/content.ts

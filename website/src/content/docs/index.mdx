@@ -1,46 +1,36 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: Starlight TypeDoc Example
+description: Starlight plugin to generate documentation from TypeScript using TypeDoc.
+head:
+  - tag: title
+    content: Starlight TypeDoc Example
 template: splash
+editUrl: false
+lastUpdated: false
 hero:
-  title: |
-    Welcome to Starlight with
-    <span
-      class="font-black text-transparent
-        bg-clip-text bg-gradient-to-b
-        from-accent-700 to-accent-400
-        dark:from-accent-500 dark:to-accent-200"
-    >
-      Tailwind
-    </span>
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Starlight plugin to generate documentation from TypeScript using TypeDoc.
   image:
-    file: ../../assets/houston.webp
+    html: '📚'
   actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: Check Example
+      link: /api/gridstack/gridstack/
+      icon: rocket
+    - text: Documentation
+      link: https://starlight-typedoc.vercel.app/
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components'
 
 ## Next steps
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="Explore the example" icon="magnifier">
+    Browse through the example pages to see how the plugin works.
+  </Card>
+  <Card title="Install the plugin" icon="puzzle">
+    Check the [getting started](https://starlight-typedoc.vercel.app/getting-started/) guide for installation
+    instructions.
+  </Card>
 </CardGrid>
