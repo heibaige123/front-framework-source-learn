@@ -2,5 +2,8 @@ packages:
   - library-sources/*
   - website
 ignoredBuiltDependencies:
+  - '@parcel/watcher'
+  - core-js
+  - core-js-pure
   - esbuild
   - sharp
