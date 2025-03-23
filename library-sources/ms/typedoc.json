@@ -1,0 +1,9 @@
+{
+    "tsconfig": "tsconfig.json",
+    "extends": [
+        "../../typedoc.base.json"
+    ],
+    "out": "../../website/docs/library-api/ms",
+    "name": "ms",
+    "entryPoints": ["src/index.ts"],
+}

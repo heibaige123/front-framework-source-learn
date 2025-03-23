@@ -1,0 +1,9 @@
+{
+    "tsconfig": "tsconfig.json",
+    "extends": [
+        "../../typedoc.base.json"
+    ],
+    "out": "../../website/docs/library-api/gridstack",
+    "name": "gridstack",
+    "entryPoints": ["src/gridstack.ts"],
+}

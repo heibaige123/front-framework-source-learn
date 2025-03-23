@@ -1,0 +1,26 @@
+{
+    "explorer.excludeGitIgnore": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": true,
+    "explorer.fileNesting.patterns": {
+        "package.json": "*.gitignore, *.lock, .eslint*, *.json, *.yaml, *.yml, *.md, LICENSE, *.js, *.ts"
+    },
+    "cSpell.words": [
+        "Alain",
+        "contenteditable",
+        "cssmin",
+        "DDUI",
+        "dragstop",
+        "dropover",
+        "Dumesny",
+        "gridstack",
+        "gridster",
+        "Pavel",
+        "Prefs",
+        "Reznikov",
+        "typeroots",
+        "venmo",
+        "gitbook"
+    ],
+    "liveServer.settings.port": 5502
+}
