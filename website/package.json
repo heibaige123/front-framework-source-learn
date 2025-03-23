@@ -1,9 +1,6 @@
 {
-  "name": "starlight-typedoc-example",
+  "name": "website",
   "version": "0.17.0",
-  "license": "MIT",
-  "description": "Starlight plugin to generate documentation from TypeScript using TypeDoc.",
-  "author": "HiDeoo <github@hideoo.dev> (https://hideoo.dev)",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -20,33 +17,21 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.32.4",
+    "@astrojs/starlight-tailwind": "^3.0.1",
+    "@astrojs/tailwind": "^5.1.4",
     "astro": "^5.5.3",
     "sharp": "^0.32.5",
+    "tailwindcss": "^3.4.4",
     "starlight-typedoc": "^0.20.0",
-    "typedoc": "^0.26.5",
+    "typedoc": "^0.28.1",
     "typedoc-plugin-frontmatter": "^1.0.0",
     "typedoc-plugin-markdown": "^4.1.1",
     "typedoc-plugin-mdn-links": "^3.0.3"
   },
-  "engines": {
-    "node": ">=18.17.1"
-  },
-  "packageManager": "pnpm@8.6.1",
   "private": true,
   "sideEffects": false,
-  "keywords": [
-    "starlight",
-    "plugin",
-    "typedoc",
-    "typescript",
-    "documentation",
-    "astro"
-  ],
-  "homepage": "https://github.com/HiDeoo/starlight-typedoc",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/HiDeoo/starlight-typedoc.git",
-    "directory": "example"
-  },
-  "bugs": "https://github.com/HiDeoo/starlight-typedoc/issues"
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2"
+  }
 }

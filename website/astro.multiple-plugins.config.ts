@@ -1,6 +1,7 @@
 import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
 import { createStarlightTypeDocPlugin } from 'starlight-typedoc'
+import {} from './utils/typedoc';
 
 const [barStarlightTypeDoc, barTypeDocSidebarGroup] = createStarlightTypeDocPlugin()
 const [fooStarlightTypeDoc, fooTypeDocSidebarGroup] = createStarlightTypeDocPlugin()

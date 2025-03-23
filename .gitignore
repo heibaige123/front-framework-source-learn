@@ -8,3 +8,6 @@ website/docs/library-api
 .pnp.loader.mjs
 
 .DS_Store
+
+website/src/content/docs
+dist
