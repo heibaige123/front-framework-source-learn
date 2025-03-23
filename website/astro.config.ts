@@ -1,7 +1,8 @@
 import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
-import starlightTypeDoc, { typeDocSidebarGroup } from 'starlight-typedoc'
+import starlightTypeDoc, { typeDocSidebarGroup } from './plugins/starlight-typedoc'
 import tailwind from '@astrojs/tailwind';
+
 export default defineConfig({
   integrations: [
     starlight({
@@ -17,8 +18,24 @@ export default defineConfig({
             label: 'API (auto-generated)',
           },
           typeDoc: {
-            plugin: ['typedoc-plugin-mdn-links', 'typedoc-plugin-frontmatter', './src/plugins/frontmatter.js'],
+            plugin: [
+              'typedoc-plugin-mdn-links',
+              'typedoc-plugin-frontmatter',
+              './plugins/frontmatter.js'
+            ],
+            logLevel: "Info",
+            exclude: ["node_modules/**", "**/dist/**", "**/test/**"],
+            includeVersion: true,
+            excludeExternals: true,
+            excludePrivate: true,
+            excludeProtected: true,
+            excludeInternal: true,
+            hideGenerator: true,
+            disableSources: true,
+            name: "gridstack",
+            theme: "default",
           },
+          errorOnEmptyDocumentation: false,
         }),
       ],
       sidebar: [
@@ -33,13 +50,13 @@ export default defineConfig({
         github: 'https://github.com/HiDeoo/starlight-typedoc',
       },
       title: 'Starlight TypeDoc Example',
-			components: {
+      components: {
         // 重写默认的 `SocialIcons` 组件。
         Header: './src/components/Header.astro',
       },
     }),
-		tailwind({
-			applyBaseStyles: false
-		}),
+    tailwind({
+      applyBaseStyles: false
+    }),
   ],
 })

@@ -29,8 +29,7 @@
     "eslint-check": "eslint --max-warnings=0 .",
     "prettier-check": "prettier --check .",
     "type-check": "tsc --noEmit",
-    "precommit": "lint-staged",
-    "docs": "pnpm typedoc"
+    "precommit": "lint-staged"
   },
   "jest": {
     "preset": "ts-jest",

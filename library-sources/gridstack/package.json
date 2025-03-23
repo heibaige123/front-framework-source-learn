@@ -38,8 +38,7 @@
         "test": "pnpm lint && karma start karma.conf.js",
         "lint": "tsc --noEmit && eslint src/*.ts",
         "reset": "rm -rf dist node_modules",
-        "prepublishOnly": "pnpm build",
-        "docs": "pnpm typedoc"
+        "prepublishOnly": "pnpm build"
     },
     "keywords": [
         "Typescript",
