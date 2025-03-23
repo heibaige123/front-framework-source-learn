@@ -6,4 +6,5 @@
     "out": "../../website/docs/library-api/gridstack",
     "name": "gridstack",
     "entryPoints": ["src/gridstack.ts"],
+    "readme": "README.md",
 }

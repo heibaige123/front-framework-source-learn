@@ -22,6 +22,7 @@ Join us on Slack: [https://gridstackjs.slack.com](https://join.slack.com/t/grids
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
+- [gridstack.js](#gridstackjs)
 - [Demo and API Documentation](#demo-and-api-documentation)
 - [Usage](#usage)
   - [Install](#install)
@@ -382,7 +383,7 @@ make sure to read v2 migration first!
 
 v3 has a new HTML5 drag&drop plugging (63k total, all native code), while still allowing you to use the legacy jquery-ui version instead (188k), or a new static grid version (34k, no user drag&drop but full API support). You will need to decide which version to use as `gridstack.all.js` no longer exist (same is now `gridstack-jq.js`) - see [include info](#include).
 
-**NOTE**: HTML5 version is almost on parity with the old jquery-ui based drag&drop. the `containment` (prevent a child from being dragged outside it's parent) and `revert` (not clear what it is for yet) are not yet implemented in initial release of v3.0.0.<br>
+**NOTE**: HTML5 version is almost on parity with the old jquery-ui based drag&drop. the `containment` (prevent a child from being dragged outside it's parent) and `revert` (not clear what it is for yet) are not yet implemented in initial release of v3.0.0.
 Also mobile devices don't support h5 `drag` events (will need to handle `touch`) whereas v3.2 jq version now now supports out of the box (see [v3.2 release](https://github.com/gridstack/gridstack.js/releases/tag/v3.2.0))
 
 Breaking changes:

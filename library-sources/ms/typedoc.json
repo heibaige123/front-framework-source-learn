@@ -6,4 +6,5 @@
     "out": "../../website/docs/library-api/ms",
     "name": "ms",
     "entryPoints": ["src/index.ts"],
+    "readme": "readme.md",
 }
