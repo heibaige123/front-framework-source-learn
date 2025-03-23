@@ -16,12 +16,6 @@
     "build:multiple-entrypoints": "astro build --config astro.multiple-entrypoints.config.ts",
     "build:packages-entrypoints": "pnpm -C ../fixtures/packages run build && astro build --config astro.packages-entrypoints.config.ts",
     "build:multiple-plugins": "astro build --config astro.multiple-plugins.config.ts",
-    "preview": "astro preview",
-    "preview:single-entrypoints": "astro preview --config astro.config.ts",
-    "preview:multiple-entrypoints": "astro preview --config astro.multiple-entrypoints.config.ts",
-    "preview:packages-entrypoints": "astro preview --config astro.packages-entrypoints.config.ts",
-    "preview:multiple-plugins": "astro preview --config astro.multiple-plugins.config.ts",
-    "astro": "astro",
     "lint": "eslint . --cache --max-warnings=0"
   },
   "dependencies": {
