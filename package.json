@@ -4,7 +4,7 @@
     "private": true,
     "type": "commonjs",
     "scripts": {
-        "watch": "pnpm clean && sh scripts/watch.sh",
+        "start": "pnpm clean && sh scripts/watch.sh",
         "build": "pnpm clean && sh scripts/build.sh",
         "clean": "sh scripts/clean.sh"
     },

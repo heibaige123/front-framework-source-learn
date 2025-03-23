@@ -31,7 +31,7 @@ export const themeConfig: Config['themeConfig'] = {
           return {
             label: item.label,
             href: item.href,
-            sidebarId: item.sidebarId
+            sidebarid: item.sidebarId
           }
         })
       },

@@ -30,7 +30,6 @@
     "prettier-check": "prettier --check .",
     "type-check": "tsc --noEmit",
     "precommit": "lint-staged",
-    "prepare": "husky install",
     "docs": "pnpm typedoc"
   },
   "jest": {

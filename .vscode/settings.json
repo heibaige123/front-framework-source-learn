@@ -3,7 +3,7 @@
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.expand": true,
     "explorer.fileNesting.patterns": {
-        "package.json": "*.gitignore, *.lock, .eslint*, *.json, *.yaml, *.yml, *.md, LICENSE, *.js, *.ts"
+        "package.json": "*.gitignore, *.npmrc, *.lock, .eslint*, *.json, *.yaml, *.yml, *.md, LICENSE, *.js, *.ts"
     },
     "cSpell.words": [
         "Alain",
@@ -13,14 +13,15 @@
         "dragstop",
         "dropover",
         "Dumesny",
+        "gitbook",
         "gridstack",
         "gridster",
         "Pavel",
         "Prefs",
         "Reznikov",
+        "sidebarid",
         "typeroots",
-        "venmo",
-        "gitbook"
+        "venmo"
     ],
     "liveServer.settings.port": 5502
 }
