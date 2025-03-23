@@ -1,29 +1,37 @@
 {
-    "name": "@example/starlight-tailwind",
-    "type": "module",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "dev": "astro dev",
-        "start": "astro dev",
-        "build": "astro build",
-        "preview": "astro preview",
-        "astro": "astro"
-    },
-    "dependencies": {
-        "@astrojs/starlight": "^0.32.4",
-        "@astrojs/starlight-tailwind": "^3.0.1",
-        "@astrojs/tailwind": "^5.1.4",
-        "astro": "^5.5.3",
-        "sharp": "^0.32.5",
-        "starlight-typedoc": "^0.20.0",
-        "tailwindcss": "^3.4.4",
-        "typedoc": "^0.26.5",
-        "typedoc-plugin-frontmatter": "^1.0.0",
-        "typedoc-plugin-markdown": "^4.1.1",
-        "typedoc-plugin-mdn-links": "^3.0.3"
-    },
-    "devDependencies": {
-        "github-slugger": "^2.0.0"
-    }
+  "name": "website",
+  "version": "0.17.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "dev:single-entrypoints": "astro dev --config astro.config.ts",
+    "dev:multiple-entrypoints": "astro dev --config astro.multiple-entrypoints.config.ts",
+    "dev:packages-entrypoints": "pnpm -C ../fixtures/packages run build && astro dev --config astro.packages-entrypoints.config.ts",
+    "dev:multiple-plugins": "astro dev --config astro.multiple-plugins.config.ts",
+    "build": "astro build",
+    "build:single-entrypoints": "astro build --config astro.config.ts",
+    "build:multiple-entrypoints": "astro build --config astro.multiple-entrypoints.config.ts",
+    "build:packages-entrypoints": "pnpm -C ../fixtures/packages run build && astro build --config astro.packages-entrypoints.config.ts",
+    "build:multiple-plugins": "astro build --config astro.multiple-plugins.config.ts",
+    "preview": "astro preview",
+    "preview:single-entrypoints": "astro preview --config astro.config.ts",
+    "preview:multiple-entrypoints": "astro preview --config astro.multiple-entrypoints.config.ts",
+    "preview:packages-entrypoints": "astro preview --config astro.packages-entrypoints.config.ts",
+    "preview:multiple-plugins": "astro preview --config astro.multiple-plugins.config.ts",
+    "astro": "astro",
+    "lint": "eslint . --cache --max-warnings=0"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.32.4",
+    "astro": "^5.5.3",
+    "sharp": "^0.32.5",
+    "starlight-typedoc": "^0.20.0",
+    "typedoc": "^0.26.5",
+    "typedoc-plugin-frontmatter": "^1.0.0",
+    "typedoc-plugin-markdown": "^4.1.1",
+    "typedoc-plugin-mdn-links": "^3.0.3"
+  },
+  "private": true,
+  "sideEffects": false
 }
