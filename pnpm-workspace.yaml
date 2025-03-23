@@ -1,4 +1,6 @@
 packages:
-  - "library-sources/*"
-  - "website"
-  
+  - library-sources/*
+  - website
+ignoredBuiltDependencies:
+  - esbuild
+  - sharp

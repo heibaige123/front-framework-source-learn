@@ -3,7 +3,7 @@
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.expand": true,
     "explorer.fileNesting.patterns": {
-        "package.json": "*.gitignore, *.npmrc, *.lock, .eslint*, *.json, *.yaml, *.yml, *.md, LICENSE, *.js, *.ts"
+        "package.json": "*.gitignore, *.npmrc, *.lock, .eslint*, *.json, *.yaml, *.yml, *.md, LICENSE, *.js, *.ts, *.mjs"
     },
     "cSpell.words": [
         "Alain",
